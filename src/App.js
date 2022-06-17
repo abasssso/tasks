@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Section from "./components/Section/Section";
 
 function App() {
+  const users = [
+    {
+      name: "Abba",
+      lastN: "Asanov",
+      age: 23,
+      id: 1,
+    },
+    {
+      name: "Maks",
+      lastN: "Danayev",
+      age: 45,
+      id: 2,
+    },
+    {
+      name: "Ermek",
+      lastN: "Bolotov",
+      age: 32,
+      id: 3,
+    },
+    {
+      name: "Dzhalil",
+      lastN: "Ilimov",
+      age: 10,
+      id: 4,
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ margin: "20px 100px" }}>
+      <Header />
+      <h1>WORKERS</h1>
+      <Section users={users} />
+      <Footer />
     </div>
   );
 }
